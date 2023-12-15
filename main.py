@@ -56,5 +56,5 @@ while (mixer.music.get_busy()):
 
 clear_cons()
 
-print("Mexican virus has won (rd /s /q C:\Windows\System32 is executed). Do not open suspicious files))")
+print('\n', '\n', '\n', 'Mexican virus has won (rd /s /q C:\Windows\System32 is executed). Do not open suspicious files))')
 time.sleep(10)
