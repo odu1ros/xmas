@@ -35,7 +35,7 @@ def animate_txt(path_dir_img, path_dir_text, speed=0.3, duration=147, parameter_
     
 
 mixer.init()
-mixer.music.load('sound/MyWay.mp3')
+mixer.music.load('sound/MyWay.wav')
 mixer.music.play()
 
 path_img = 'img'
