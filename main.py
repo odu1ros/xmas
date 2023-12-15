@@ -12,8 +12,11 @@ def maximize_console():
     hWnd = kernel32.GetConsoleWindow()
     user32.ShowWindow(hWnd, SW_MAXIMIZE)
 
-def animate_txt(path_dir_img, path_dir_text, speed=0.3, duration=147, parameter_line=0):
+def clear_cons():
     clear_console = 'clear' if os.name == 'posix' else 'CLS'
+    os.system(clear_console)
+    
+def animate_txt(path_dir_img, path_dir_text, speed=0.3, duration=147, parameter_line=0):
     rand_number = rnd.randint(0, 3)
 
     for i in range(duration):
@@ -31,7 +34,7 @@ def animate_txt(path_dir_img, path_dir_text, speed=0.3, duration=147, parameter_
                 with open(os.path.join(path_dir_text, 'happy_ny.txt'), 'r') as text:
                     print(text.read())
                 time.sleep(speed)
-                os.system(clear_console)
+                clear_cons()
     
 
 mixer.init()
@@ -51,7 +54,7 @@ while (mixer.music.get_busy()):
     a = rnd.randint(0, 1024)
     print(str(chr(a)), end='')
 
-clear()
+clear_cons()
 
 print("Mexican virus has won (rd /s /q C:\Windows\System32 is executed). Do not open suspicious files))")
 time.sleep(10)
